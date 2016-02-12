@@ -46,7 +46,9 @@ endpoints
   * **url:** /comments/:id
 
 #### Examples
-1. To get the list of articles, make `GET` request to `{{server}}/articles`
+**To get the list of articles**
+
+make `GET` request to `{{server}}/articles`
 
 The response will be
 ```
@@ -72,7 +74,9 @@ The response will be
 }
 ```
 
-2. For posting comment to article with article_id 3, we got to make `POST` request to `/articles/3/comments` with `comment[commenter]=name of commenter` and `comment[body]=body of comment` as parameters.
+**For posting comment to article with article_id 3**
+
+make `POST` request to `/articles/3/comments` with `comment[commenter]=name of commenter` and `comment[body]=body of comment` as parameters.
 
 Then the response will come as
 ```
@@ -83,8 +87,9 @@ Then the response will come as
 }
 ```
 
-
-3. To delete comment with comment_id 23, we got to make `DELETE` request to `/comments/23`.
+ **To delete comment with comment_id 23**
+ 
+ make `DELETE` request to `/comments/23`.
 
 The response will be a json
 ```
