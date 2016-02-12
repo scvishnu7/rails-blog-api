@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :articles
+  shallow do
+     resources :articles do 
+          resources :comments
+     end
+  end
 
   get 'welcome/index'
 
