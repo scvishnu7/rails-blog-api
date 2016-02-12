@@ -44,3 +44,54 @@ endpoints
 4. Delete Comment
   * **method:** DELETE
   * **url:** /comments/:id
+
+#### Examples
+1. To get the list of articles, make `GET` request to `{{server}}/articles`
+
+The response will be
+```
+{
+    "status": "ok",
+    "message": "Success!",
+    "data": [
+        {
+            "id": 2,
+            "title": "new title for 2",
+            "text": "new text for 2",
+            "created_at": "2016-02-12T01:17:37.154Z",
+            "updated_at": "2016-02-12T08:00:06.436Z"
+        },
+        {
+            "id": 3,
+            "title": "something for 3",
+            "text": "another thing for text body",
+            "created_at": "2016-02-12T07:56:59.380Z",
+            "updated_at": "2016-02-12T08:00:27.975Z"
+        }
+    ]
+}
+```
+
+2. For posting comment to article with article_id 3, we got to make `POST` request to `/articles/3/comments` with `comment[commenter]=name of commenter` and `comment[body]=body of comment` as parameters.
+
+Then the response will come as
+```
+{
+    "status": "ok",
+    "message": "Comment Added",
+    "id": 43
+}
+```
+
+
+3. To delete comment with comment_id 23, we got to make `DELETE` request to `/comments/23`.
+
+The response will be a json
+```
+{
+    "status": "ok",
+    "message": "Comment Deleted",
+    "id": 43
+}
+```
+
