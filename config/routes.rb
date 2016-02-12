@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-
   shallow do
-     resources :articles do 
-          resources :comments
-     end
+    resources :articles do
+      resources :comments
+    end
   end
 
   get 'welcome/index'

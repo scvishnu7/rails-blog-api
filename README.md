@@ -30,7 +30,7 @@ endpoints
 1. Add Comment
   * **method:** POST
   * **url:** /articles/:article_id/comments
-  * **params:**  comment[commenter]  ,  comment[body] , comment[article_id]
+  * **params:**  comment[commenter]  ,  comment[body]
 
 2. List Comment
   * **method:** GET

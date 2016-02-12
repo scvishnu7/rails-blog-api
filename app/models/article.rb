@@ -1,6 +1,6 @@
 class Article < ActiveRecord::Base
-   validates :title, :presence => true
-   validates :text, :presence => true
+  validates :title, presence: true
+  validates :text, presence: true
 
-   has_many :comments
+  has_many :comments
 end
