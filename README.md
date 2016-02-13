@@ -15,12 +15,16 @@ endpoints
   * **method:** GET
   * **url:** /articles
 
-3. Update article
+3. View article with comments
+  * **method:** GET
+  * **url:** /articles/:id
+
+4. Update article
   * **method:** PATCH 
   * **url:** /articles/:id
   * **params:**  article[title]  and   article[text]
 
-4. Delete article
+5. Delete article
   * **method:** DELETE 
   * **url:** /articles/:id
 

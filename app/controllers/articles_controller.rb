@@ -30,8 +30,9 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    render json: { status: :ok, message: 'Success!', data: @article }
-    end
+	@comments = @article.comments
+    render json: { status: :ok, message: 'Success!', article: @article, comments: @comments }
+  end
 
   def create
     @article = Article.new(article_params)
